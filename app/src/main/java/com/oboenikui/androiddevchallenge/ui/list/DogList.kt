@@ -27,7 +27,10 @@ import com.oboenikui.androiddevchallenge.Screens
 import com.oboenikui.androiddevchallenge.model.Dog
 import com.oboenikui.androiddevchallenge.model.Sex
 import com.oboenikui.androiddevchallenge.ui.theme.MyTheme
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 
 class DogListViewModel : ViewModel() {
     private val _dogs = MutableStateFlow<List<Dog>>(emptyList())
